@@ -2,6 +2,7 @@ package com.example.dicecreation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -71,7 +72,6 @@ class MainActivity : AppCompatActivity() {
         newTurnButton.setOnClickListener {
             if (lockTurnScore) {
                 startNewRound()
-                rollDice()
             } else {
                 Toast.makeText(this, "Please lock in a score before ending the round", Toast.LENGTH_SHORT).show()
             }
@@ -84,6 +84,7 @@ class MainActivity : AppCompatActivity() {
                     if (!diceArray[diceIndex].isLocked) {
                         diceArray[diceIndex].roll()
                         updateDiceImage(diceIndex)
+                        diceImages[diceIndex].visibility = View.VISIBLE
                     }
                 }
                 diceRollsLeft--
@@ -115,9 +116,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updatePointViews(singlePoints: IntArray) {
-        singlePoints.forEachIndexed { pointIndex, points ->
-            if (!lockedPoints[pointIndex]) {
-                pointSingles[pointIndex].text = points.toString()
+        singlePoints.forEachIndexed { index, points ->
+            if (!lockedPoints[index]) {
+                pointSingles[index].text = points.toString()
             }
         }
     }
@@ -139,11 +140,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun resetPointsAfterLock(lockedPointIndex: Int) {
-        pointSingles.forEachIndexed { lockedIndex, button ->
-            if (lockedIndex != lockedPointIndex) {
+        pointSingles.forEachIndexed { index, button ->
+            if (index != lockedPointIndex && !lockedPoints[index]) {
                 button.text = "0"
-                button.alpha = 0.5f
-                lockedPoints[lockedIndex] = true
+                if (!lockedPoints[index]) {
+                    button.text = "0"
+                }
             }
         }
     }
@@ -152,13 +154,19 @@ class MainActivity : AppCompatActivity() {
         prepareNewRound()
         unlockAllPoints()
         lockTurnScore = false
+        makeDiceInvisible()
+    }
+
+    private fun makeDiceInvisible() {
+        diceImages.forEach { it.visibility = View.INVISIBLE }
     }
 
     private fun unlockAllPoints() {
-        lockedPoints.fill(false)
-        pointSingles.forEach { button ->
-            button.alpha = 1.0f
-            button.text = "0"
+        pointSingles.forEachIndexed { index, button ->
+            if (!lockedPoints[index]) {
+                button.alpha = 1.0f
+                button.text = "0"
+            }
         }
     }
 }
