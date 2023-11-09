@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+
+            <gradient android:gradientRadius="@dimen/cardview_compat_inset_shadow"
+                android:startColor="#D9FBE7C6"
+                android:centerColor="#FBD5C6"
+                android:endColor="#D9FBE7C6"/>
+            <corners android:radius="5sp"/>
+        </shape>
+    </item>
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/dark_yellow"></solid>
+
+        </shape>
+    </item>
+</selector>

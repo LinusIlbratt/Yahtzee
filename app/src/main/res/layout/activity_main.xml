@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/home_background">
+
+    <Button
+        android:id="@+id/btn_house"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="253dp"
+        tools:layout_editor_absoluteY="105dp" />
+
+    <Button
+        android:id="@+id/btn_small_straight"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="142dp" />
+
+    <Button
+        android:id="@+id/btn_large_straight"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="182dp" />
+
+    <Button
+        android:id="@+id/btn_yahtzee"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="229dp" />
+
+    <Button
+        android:id="@+id/btn_chance"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="261dp"
+        tools:layout_editor_absoluteY="281dp" />
+
+    <TextView
+        android:id="@+id/triple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Triple"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/quads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quads"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/btn_sixes"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fives" />
+
+    <Button
+        android:id="@+id/btn_fives"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fours" />
+
+    <Button
+        android:id="@+id/btn_fours"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_threes" />
+
+    <Button
+        android:id="@+id/btn_threes"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_twos" />
+
+    <Button
+        android:id="@+id/btn_twos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ones" />
+
+    <TextView
+        android:id="@+id/sixes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:text="Sixes"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_sixes"
+        app:layout_constraintTop_toBottomOf="@+id/fives" />
+
+    <TextView
+        android:id="@+id/fives"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:text="Fives"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_fives"
+        app:layout_constraintTop_toBottomOf="@+id/fours" />
+
+    <TextView
+        android:id="@+id/fours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:text="Fours"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_fours"
+        app:layout_constraintTop_toBottomOf="@+id/threes" />
+
+    <TextView
+        android:id="@+id/threes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:text="Threes"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_threes"
+        app:layout_constraintTop_toBottomOf="@+id/twos" />
+
+    <TextView
+        android:id="@+id/twos"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:text="Twos"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_twos"
+        app:layout_constraintTop_toBottomOf="@+id/ones" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice3" />
+
+    <Button
+        android:id="@+id/rollDiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/poppins"
+        android:text="Roll Dice"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_newTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="90dp"
+        android:backgroundTint="#6A82DA"
+        android:fontFamily="@font/poppins"
+        android:text="New Turn"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice1" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice4" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice5" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dice6" />
+
+    <TextView
+        android:id="@+id/ones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:text="Ones"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ones"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ones"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_triple"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="253dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/btn_quads"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:text="0"
+        tools:layout_editor_absoluteX="253dp"
+        tools:layout_editor_absoluteY="62dp" />
+
+    <TextView
+        android:id="@+id/house"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="House"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <TextView
+        android:id="@+id/small_straight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S-Straight"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <TextView
+        android:id="@+id/large_straight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L-Straight"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+    <TextView
+        android:id="@+id/yahtzee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yahtzee"
+        tools:layout_editor_absoluteX="191dp"
+        tools:layout_editor_absoluteY="243dp" />
+
+    <TextView
+        android:id="@+id/chance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chance"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <TextView
+        android:id="@+id/diceCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins"
+        android:text="3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollDiceButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

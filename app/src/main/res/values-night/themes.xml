@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DiceCreation" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/hot_pink</item>
+        <!-- ... other attributes for the base theme -->
+    </style>
+
+    <!-- Light theme customizations. -->
+    <style name="Theme.DiceCreation" parent="Base.Theme.DiceCreation">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- ... other attributes for light theme -->
+    </style>
+
+    <!-- Dark theme customizations. -->
+    <!-- In a real-world scenario, this would go in a `values-night` folder. -->
+    <style name="Theme.DiceCreation.Dark" parent="Base.Theme.DiceCreation">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- ... other attributes for dark theme -->
+    </style>
+</resources>
