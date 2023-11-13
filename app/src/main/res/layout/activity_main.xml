@@ -7,210 +7,38 @@
     tools:context=".MainActivity"
     android:background="@drawable/home_background">
 
-    <Button
-        android:id="@+id/btn_house"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_quads" />
-
-    <Button
-        android:id="@+id/btn_small_straight"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_house" />
-
-    <Button
-        android:id="@+id/btn_large_straight"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_small_straight" />
-
-    <Button
-        android:id="@+id/btn_yahtzee"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_large_straight" />
-
-    <Button
-        android:id="@+id/btn_chance"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_yahtzee" />
-
-    <TextView
-        android:id="@+id/triple"
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="Triple"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_triple"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:id="@+id/quads"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="Quads"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_quads"
-        app:layout_constraintTop_toBottomOf="@+id/triple" />
-
-    <Button
-        android:id="@+id/btn_sixes"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_fives" />
-
-    <Button
-        android:id="@+id/btn_fives"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_fours" />
-
-    <Button
-        android:id="@+id/btn_fours"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_threes" />
-
-    <Button
-        android:id="@+id/btn_threes"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_twos" />
-
-    <Button
-        android:id="@+id/btn_twos"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ones" />
-
-    <TextView
-        android:id="@+id/sixes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="10dp"
-        android:text="Sixes"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_sixes"
-        app:layout_constraintTop_toBottomOf="@+id/fives" />
-
-    <TextView
-        android:id="@+id/fives"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="10dp"
-        android:text="Fives"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_fives"
-        app:layout_constraintTop_toBottomOf="@+id/fours" />
-
-    <TextView
-        android:id="@+id/fours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="10dp"
-        android:text="Fours"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_fours"
-        app:layout_constraintTop_toBottomOf="@+id/threes" />
-
-    <TextView
-        android:id="@+id/threes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="10dp"
-        android:text="Threes"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_threes"
-        app:layout_constraintTop_toBottomOf="@+id/twos" />
-
-    <TextView
-        android:id="@+id/twos"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="10dp"
-        android:text="Twos"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_twos"
-        app:layout_constraintTop_toBottomOf="@+id/ones" />
+    </FrameLayout>
 
     <com.example.dicecreation.DiceView
         android:id="@+id/diceView1"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="300dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diceView2"
         app:srcCompat="@drawable/dice1" />
 
     <com.example.dicecreation.DiceView
         android:id="@+id/diceView2"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diceView3"
         app:srcCompat="@drawable/dice2" />
 
     <com.example.dicecreation.DiceView
         android:id="@+id/diceView3"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="60dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -221,34 +49,21 @@
         android:id="@+id/diceView4"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="10dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/diceView3"
         app:srcCompat="@drawable/dice4" />
 
     <com.example.dicecreation.DiceView
         android:id="@+id/diceView5"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="180dp"
+        android:layout_marginStart="10dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/diceView4"
         app:srcCompat="@drawable/dice5" />
-
-    <com.example.dicecreation.DiceView
-        android:id="@+id/diceView6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/rollDiceButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dice6" />
 
     <Button
         android:id="@+id/rollDiceButton"
@@ -281,102 +96,6 @@
         android:typeface="serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/ones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="10dp"
-        android:text="Ones"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_ones"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_ones"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
-        android:text="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_triple"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="100dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_quads"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:text="0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_triple" />
-
-    <TextView
-        android:id="@+id/house"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="House"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_house"
-        app:layout_constraintTop_toBottomOf="@+id/quads" />
-
-    <TextView
-        android:id="@+id/small_straight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="S-Straight"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_small_straight"
-        app:layout_constraintTop_toBottomOf="@+id/house" />
-
-    <TextView
-        android:id="@+id/large_straight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="L-Straight"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_large_straight"
-        app:layout_constraintTop_toBottomOf="@+id/small_straight" />
-
-    <TextView
-        android:id="@+id/yahtzee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="Yahtzee"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_yahtzee"
-        app:layout_constraintTop_toBottomOf="@+id/large_straight" />
-
-    <TextView
-        android:id="@+id/chance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
-        android:text="Chance"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_chance"
-        app:layout_constraintTop_toBottomOf="@+id/yahtzee" />
 
     <TextView
         android:id="@+id/diceCounter"
